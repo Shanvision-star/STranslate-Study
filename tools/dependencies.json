@@ -1,0 +1,6 @@
+[
+  {"name":"python-3.14.10-embed-amd64.zip","url":"https://www.python.org/ftp/python/3.14.10/python-3.14.10-embed-amd64.zip","sha256":"90905e64a840557d8c1bc4f5b74db3d7ee85e3ffb217611cac1c7813acea4159"},
+  {"name":"eng.traineddata","url":"https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/eng.traineddata","sha256":"7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"},
+  {"name":"spa.traineddata","url":"https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/spa.traineddata","sha256":"6f2e04d02774a18f01bed44b1111f2cd7f3ba7ac9dc4373cd3f898a40ea6b464"},
+  {"name":"chi_sim.traineddata","url":"https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/chi_sim.traineddata","sha256":"a5fcb6f0db1e1d6d8522f39db4e848f05984669172e584e8d76b6b3141e1f730"}
+]

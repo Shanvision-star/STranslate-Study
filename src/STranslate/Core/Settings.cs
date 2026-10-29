@@ -47,11 +47,14 @@ public partial class Settings : ObservableObject
     /// <summary>
     /// 是否启用自动检查更新
     /// </summary>
-    [ObservableProperty] public partial bool AutoCheckUpdate { get; set; } = true;
+    [ObservableProperty] public partial bool AutoCheckUpdate { get; set; } = false;
 
     [ObservableProperty] public partial ElementTheme ColorScheme { get; set; }
 
     [ObservableProperty] public partial HistoryLimit HistoryLimit { get; set; } = HistoryLimit.Limit1000;
+
+    [ObservableProperty] public partial bool StudyLibraryAutoSave { get; set; } = true;
+    [ObservableProperty] public partial bool StudyLibraryCloudSyncEnabled { get; set; } = false;
 
     [ObservableProperty] public partial bool IsColorSchemeVisible { get; set; } = true;
 

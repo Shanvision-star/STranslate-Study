@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>NHotkey</id>
+    <version>4.0.0</version>
+    <authors>Thomas Levesque</authors>
+    <license type="expression">Apache-2.0</license>
+    <licenseUrl>https://licenses.nuget.org/Apache-2.0</licenseUrl>
+    <projectUrl>https://github.com/thomaslevesque/NHotkey</projectUrl>
+    <description>A managed library to handle global hotkeys in Windows Forms and WPF applications. NOTE: this package doesn't contain a concrete HotkeyManager implementation; you should add either the NHotkey.Wpf or NHotkey.WindowsForms package to get one.</description>
+    <tags>global hotkey windows</tags>
+    <repository type="git" url="https://github.com/thomaslevesque/NHotkey" commit="0c384a0c2178ed931e8e74d13a79231f9192803b" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.2" />
+      <group targetFramework="net6.0-windows7.0" />
+    </dependencies>
+  </metadata>
+</package>

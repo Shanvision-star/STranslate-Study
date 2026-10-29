@@ -22,3 +22,19 @@ target/
 
 # superpowers docs
 docs/superpowers/
+# Private study data and local build artifacts
+PortableConfig/
+StudyLibrary/
+output/
+.test-deps/
+.pytest_cache/
+__pycache__/
+.playwright-cli/
+*.db
+*.db-wal
+*.db-shm
+*.readback.json
+integrations.json
+StudyAssistant.json
+StudyPrivacy.json
+AssistantWorkspace/

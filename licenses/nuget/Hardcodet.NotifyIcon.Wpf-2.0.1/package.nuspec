@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Hardcodet.NotifyIcon.Wpf</id>
+    <version>2.0.1</version>
+    <authors>Philipp Sumi, Robin Krom, Jan Karger</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>icon.png</icon>
+    <projectUrl>https://github.com/hardcodet/wpf-notifyicon</projectUrl>
+    <description>This is an implementation of a NotifyIcon (aka system tray icon or taskbar icon) for the WPF platform. It does not just rely on the Windows Forms NotifyIcon component, but is a purely independent control which leverages several features of the WPF framework in order to display rich tooltips, popups, context menus, and balloon messages. It can be used directly in code or embedded in any XAML file.
+
+Source code and extensive sample application available at http://www.hardcodet.net/projects/wpf-notifyicon</description>
+    <copyright>Copyright (c) 2009 - 2019 Philipp Sumi, 2019 - 2024 Philipp Sumi, Robin Krom, Jan Karger</copyright>
+    <repository type="git" url="https://github.com/hardcodet/wpf-notifyicon" commit="0a9d1a92914db8fb6b1cca1f073469644cd9bf3b" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.2" />
+      <group targetFramework=".NETFramework4.7.2" />
+      <group targetFramework="net6.0-windows7.0" />
+      <group targetFramework="net8.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App" />
+      </group>
+      <group targetFramework="net8.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App" />
+      </group>
+      <group targetFramework=".NETFramework4.6.2" />
+      <group targetFramework=".NETFramework4.7.2" />
+    </frameworkReferences>
+  </metadata>
+</package>

@@ -60,8 +60,55 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
     private readonly Dictionary<string, CancellationTokenSource> _manualTranslationTaskTokens = [];
     private readonly SemaphoreSlim _manualTranslationHistoryLock = new(1, 1);
     private readonly TranslationResultCoordinator _translationCoordinator;
+    private readonly StudyLibrary _studyLibrary = new(System.IO.Path.Combine(DataLocation.DataDirectory(), "StudyLibrary"));
+    private (string Text, StudySource Source)? _studyCapture;
+
+    [ObservableProperty] public partial string StudyLibraryStatus { get; set; } = "词句会自动保存，可在学习库查看";
+
+    [RelayCommand]
+    private async Task OpenStudyLibraryAsync()
+    {
+        try
+        {
+            var path = await _studyLibrary.ExportAsync();
+            var entries = await _studyLibrary.ReadAsync();
+            StudyLibraryStatus = $"学习库共 {entries.Count} 条";
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(path) { UseShellExecute = true });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "打开学习库失败");
+            _snackbar.ShowError("打开学习库失败：" + ex.Message);
+        }
+    }
 
     public Settings Settings { get; }
+
+    [RelayCommand]
+    private async Task OpenStudyAssistantAsync()
+    {
+        try
+        {
+            var root = Constant.ProgramDirectory;
+            var python = System.IO.Path.Combine(root, "python", "python.exe");
+            var script = System.IO.Path.Combine(root, "StudyTools", "study_bridge.py");
+            if (!System.IO.File.Exists(python) || !System.IO.File.Exists(script))
+            {
+                _snackbar.ShowWarning("请使用包含学习助手的完整发布包；源码运行方式见 README。");
+                return;
+            }
+            var start = new System.Diagnostics.ProcessStartInfo(python) { UseShellExecute = true, WorkingDirectory = root };
+            foreach (var argument in new[] { "-X", "utf8", script, "setup", "--app-dir", root }) start.ArgumentList.Add(argument);
+            using var process = System.Diagnostics.Process.Start(start);
+            if (process != null) await process.WaitForExitAsync();
+            // 仅同步用户在引导中明确选择的外发开关，保留界面其他当前设置。
+            var path = System.IO.Path.Combine(DataLocation.SettingsDirectory, "Settings.json");
+            using var json = System.Text.Json.JsonDocument.Parse(await System.IO.File.ReadAllTextAsync(path));
+            if (json.RootElement.TryGetProperty("StudyLibraryCloudSyncEnabled", out var enabled))
+                Settings.StudyLibraryCloudSyncEnabled = enabled.GetBoolean();
+        }
+        catch (Exception ex) { _snackbar.ShowError("学习助手设置未完成：" + ex.Message); }
+    }
     public HotkeySettings HotkeySettings { get; }
 
     public MainWindowViewModel(
@@ -191,7 +238,8 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
         LangEnum CacheSource,
         LangEnum CacheTarget,
         LangEnum EffectiveSource,
-        LangEnum EffectiveTarget);
+        LangEnum EffectiveTarget,
+        bool LanguageVerified = true);
 
     [ObservableProperty]
     public partial ImageSource TrayIcon { get; set; } = BitmapImageLoc.AppIcon;
@@ -282,12 +330,13 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
     /// </summary>
     /// <param name="text"></param>
     /// <param name="force">不为空则跳过缓存</param>
-    public void ExecuteTranslate(string text, string? force = null)
+    public void ExecuteTranslate(string text, string? force = null, StudySource? studySource = null)
     {
         ExitInputTranslateMode();
         CancelAllOperations();
         ResetTranslationLanguageState();
         InputText = text;
+        _studyCapture = (text, studySource ?? StudySource.Unknown());
         TranslateCommand.Execute(force);
 
         var skipShow = _skipShowForNextTranslate;
@@ -315,6 +364,8 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
 
     private async Task ExecuteAutomaticTranslationAsync(object? force, CancellationToken cancellationToken)
     {
+        var studySource = _studyCapture is { } captured && captured.Text == InputText
+            ? captured.Source : StudySource.Unknown();
         // 取消防抖执行器中的待执行任务
         _debounceExecutor.Cancel();
         var operation = _translationCoordinator.BeginAutomaticOperation(
@@ -343,6 +394,28 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
         operation.CancellationToken.ThrowIfCancellationRequested();
         if (!operation.IsLatestAutomatic)
             return;
+
+        if (Settings.StudyLibraryAutoSave && studySource.Kind != "manual" && history != null)
+        {
+            try
+            {
+                var saved = await _studyLibrary.SaveAsync(history, studySource, Guid.NewGuid().ToString("N"),
+                    () => operation.IsLatestAutomatic && !operation.CancellationToken.IsCancellationRequested,
+                    allowCloudSync: Settings.StudyLibraryCloudSyncEnabled);
+                if (saved)
+                    StudyLibraryStatus = history.StudyLanguageVerified
+                        ? "已保存到本机学习库 · 已脱敏"
+                        : "已保存 · 请确认语种后再同步";
+                else if (_studyLibrary.IsRestricted(history.SourceText) || history.Data.Any(d => _studyLibrary.IsRestricted(d.TransResult?.Text)))
+                    StudyLibraryStatus = "含私密机构内容，未加入学习库";
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "学习库保存失败，翻译结果保留");
+                StudyLibraryStatus = "保存失败，请重试或检查磁盘";
+                _snackbar.ShowError("翻译完成，但学习库保存失败：" + ex.Message);
+            }
+        }
 
         // 翻译后自动复制
         if (Settings.CopyAfterTranslation != CopyAfterTranslation.NoAction)
@@ -788,7 +861,16 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
         }
 
         if (uncachedSvcs.Count == 0)
+        {
+            if (Settings.StudyLibraryAutoSave && history != null)
+            {
+                // 旧缓存未保存检测成功与否，归档前重新识别，避免把回退英语误发到英语对话。
+                var cachedContext = await ResolveTranslationLanguageContextAsync(operation, forcedSourceLanguage);
+                ApplyEffectiveLanguages(history, cachedContext.EffectiveSource, cachedContext.EffectiveTarget);
+                history.StudyLanguageVerified = cachedContext.LanguageVerified;
+            }
             return history;
+        }
 
         var context = await ResolveTranslationLanguageContextAsync(
             operation,
@@ -796,6 +878,7 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
 
         history ??= CreateHistoryModel(operation.Text, context.CacheSource, context.CacheTarget);
         ApplyEffectiveLanguages(history, context.EffectiveSource, context.EffectiveTarget);
+        history.StudyLanguageVerified = context.LanguageVerified;
 
         await ExecuteTranslationForServicesAsync(
             uncachedSvcs,
@@ -1174,15 +1257,16 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
     [RelayCommand(IncludeCancelCommand = true)]
     private async Task ScreenshotTranslateAsync(CancellationToken cancellationToken)
     {
+        var studySource = StudySourceCapture.Capture("screenshot");
         var ocrPlugin = GetOcrSvcAndNotify();
         if (ocrPlugin == null)
             return;
 
         using var bitmap = await _screenshot.GetScreenshotAsync();
-        await ScreenshotTranslateHandlerAsync(bitmap, ocrPlugin, cancellationToken);
+        await ScreenshotTranslateHandlerAsync(bitmap, ocrPlugin, cancellationToken, studySource);
     }
 
-    public async Task ScreenshotTranslateHandlerAsync(Bitmap? bitmap, IOcrPlugin? ocrPlugin = default, CancellationToken cancellationToken = default)
+    public async Task ScreenshotTranslateHandlerAsync(Bitmap? bitmap, IOcrPlugin? ocrPlugin = default, CancellationToken cancellationToken = default, StudySource? studySource = null)
     {
         if (bitmap == null) return;
 
@@ -1206,7 +1290,8 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
                 ClipboardHelper.SetText(result.Text);
 
             _skipShowForNextTranslate = !Settings.FocusInputAfterScreenshotTranslate && IsTopmost;
-            ExecuteTranslate(HandleCapturedText(result.Text, TextSeparatorHandleScope.ScreenshotTranslate));
+            ExecuteTranslate(HandleCapturedText(result.Text, TextSeparatorHandleScope.ScreenshotTranslate),
+                studySource: studySource ?? StudySource.Unknown("screenshot_import"));
         }
         catch (TaskCanceledException)
         {
@@ -1749,14 +1834,16 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
     {
         var text = await _mouseSelectionService.CaptureIconSelectedTextAsync();
         if (!string.IsNullOrWhiteSpace(text))
-            ExecuteTranslate(HandleCapturedText(text, TextSeparatorHandleScope.MouseSelection));
+            ExecuteTranslate(HandleCapturedText(text, TextSeparatorHandleScope.MouseSelection),
+                studySource: StudySourceCapture.Capture("selection", text));
     }
 
     private void OnMouseSelectionTextSelected(object? sender, string text)
     {
         _ = Application.Current.Dispatcher.InvokeAsync(() =>
         {
-            ExecuteTranslate(HandleCapturedText(text, TextSeparatorHandleScope.MouseSelection));
+            ExecuteTranslate(HandleCapturedText(text, TextSeparatorHandleScope.MouseSelection),
+                studySource: StudySourceCapture.Capture("selection", text));
         });
     }
 
@@ -1826,7 +1913,8 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
             return;
         }
 
-        ExecuteTranslate(HandleCapturedText(text, TextSeparatorHandleScope.Crossword));
+        ExecuteTranslate(HandleCapturedText(text, TextSeparatorHandleScope.Crossword),
+            studySource: StudySourceCapture.Capture("selection", text));
     }
 
     public void CrosswordTranslateByCtrlSameCHandler()
@@ -1843,7 +1931,8 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
                 return;
             }
 
-            ExecuteTranslate(HandleCapturedText(text, TextSeparatorHandleScope.Crossword));
+            ExecuteTranslate(HandleCapturedText(text, TextSeparatorHandleScope.Crossword),
+                studySource: StudySourceCapture.Capture("selection", text));
         });
     }
 
@@ -1891,7 +1980,8 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
         if (string.IsNullOrWhiteSpace(text)) return;
 
         App.Current.Dispatcher.Invoke(() =>
-            ExecuteTranslate(HandleCapturedText(text, TextSeparatorHandleScope.ClipboardMonitor)));
+            ExecuteTranslate(HandleCapturedText(text, TextSeparatorHandleScope.ClipboardMonitor),
+                studySource: StudySourceCapture.Capture("clipboard", text)));
     }
 
     [RelayCommand(IncludeCancelCommand = true)]
@@ -2660,6 +2750,7 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
 
     partial void OnInputTextChanged(string value)
     {
+        _studyCapture = null;
         ResetTranslationLanguageState();
 
         if (!Settings.AutoTranslate)
@@ -2739,7 +2830,7 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
                 LanguageDetector.GetTargetLanguage(forcedSource, operation.TargetLang));
         }
 
-        var (_, source, target) = await LanguageDetector
+        var (languageDetected, source, target) = await LanguageDetector
             .GetLanguageAsync(
                 operation.Text,
                 operation.SourceLang,
@@ -2755,7 +2846,8 @@ public partial class MainWindowViewModel : ObservableObject, IDisposable
             operation.SourceLang,
             operation.TargetLang,
             source,
-            target);
+            target) with { LanguageVerified = languageDetected &&
+                (operation.SourceLang != LangEnum.Auto || Settings.LanguageDetector != LanguageDetectorType.Local) };
     }
 
     private IdentifiedLanguageState CreateCacheIdentifiedLanguageState(HistoryModel history)

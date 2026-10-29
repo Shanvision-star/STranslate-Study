@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>gong-wpf-dragdrop</id>
+    <version>4.0.0</version>
+    <title>gong-wpf-dragdrop</title>
+    <authors>Jan Karger, Steven Kirk, mitchell.jon</authors>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>GongSolutions.Wpf.DragDrop.png</icon>
+    <projectUrl>https://github.com/punker76/gong-wpf-dragdrop</projectUrl>
+    <description>An easy to use drag'n'drop framework for WPF applications.</description>
+    <releaseNotes>https://github.com/punker76/gong-wpf-dragdrop/releases</releaseNotes>
+    <copyright>Copyright © 2013 - 2024 GongSolutions.WPF.DragDrop</copyright>
+    <tags>WPF Windows UI XAML Toolkit Library .NET</tags>
+    <repository type="git" url="https://github.com/punker76/gong-wpf-dragdrop.git" branch="main" commit="de75a24239a950ae381bac602c3ce3867f6cd2f6" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.2" />
+      <group targetFramework="net6.0-windows7.0" />
+      <group targetFramework="net8.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+      <group targetFramework="net8.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+      <group targetFramework=".NETFramework4.6.2" />
+    </frameworkReferences>
+  </metadata>
+</package>

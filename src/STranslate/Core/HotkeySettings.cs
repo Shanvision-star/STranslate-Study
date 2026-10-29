@@ -32,8 +32,8 @@ public partial class HotkeySettings : ObservableObject, IDisposable
 
     public GlobalHotkey OpenWindowHotkey { get; set; } = new("Alt + G");
     public GlobalHotkey InputTranslateHotkey { get; set; } = new(Constant.EmptyHotkey);
-    public GlobalHotkey CrosswordTranslateHotkey { get; set; } = new("Alt + D");
-    public GlobalHotkey ScreenshotTranslateHotkey { get; set; } = new("Alt + S");
+    public GlobalHotkey CrosswordTranslateHotkey { get; set; } = new("Ctrl + Q");
+    public GlobalHotkey ScreenshotTranslateHotkey { get; set; } = new("Ctrl + Alt + Shift + S");
     public GlobalHotkey ImageTranslateHotkey { get; set; } = new("Alt + Shift + X");
     public GlobalHotkey ReplaceTranslateHotkey { get; set; } = new(Constant.EmptyHotkey);
     public GlobalHotkey MouseSelectionTranslationHotkey { get; set; } = new(Constant.EmptyHotkey);

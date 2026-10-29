@@ -885,4 +885,7 @@ Alt+کلیک چپ -> تنظیمات ترجمه متن</sys:String>
     <sys:String x:Key="EditPrompt_Content">ویرایش</sys:String>
     <sys:String x:Key="Temperature">میزان خلاقیت (Temperature)</sys:String>
     <sys:String x:Key="Temperature_Description">کنترل میزان تصادفی بودن خروجی مدل</sys:String>
+    <sys:String x:Key="StudyLibraryOpen">Open study library / Print</sys:String>
+    <sys:String x:Key="StudyLibraryAutoSave">Auto-save English and Spanish</sys:String>
+    <sys:String x:Key="StudyLibraryCloudSync">Allow sync to personal ChatGPT</sys:String>
 </ResourceDictionary>

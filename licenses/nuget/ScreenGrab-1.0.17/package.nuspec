@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>ScreenGrab</id>
+    <version>1.0.17</version>
+    <title>ScreenGrab</title>
+    <authors>zggsong</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>nuget.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/ZGGSONG/ScreenGrab/</projectUrl>
+    <description>ScreenGrab extracted from Text-Grab</description>
+    <releaseNotes>https://github.com/ZGGSONG/ScreenGrab/Releases</releaseNotes>
+    <tags>ScreenGrab Screenshot WPF Text-Grab</tags>
+    <repository type="git" url="https://github.com/ZGGSONG/ScreenGrab/" commit="9acf5b25278c9f27c6372d0477de63b077d6e416" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.2">
+        <dependency id="System.Drawing.Common" version="10.0.1" exclude="Build,Analyzers" />
+        <dependency id="WpfScreenHelper" version="2.1.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETFramework4.8.1">
+        <dependency id="System.Drawing.Common" version="10.0.1" exclude="Build,Analyzers" />
+        <dependency id="WpfScreenHelper" version="2.1.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net8.0-windows7.0">
+        <dependency id="System.Drawing.Common" version="10.0.1" exclude="Build,Analyzers" />
+        <dependency id="WpfScreenHelper" version="2.1.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net8.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+      <group targetFramework=".NETFramework4.7.2" />
+      <group targetFramework=".NETFramework4.8.1" />
+    </frameworkReferences>
+  </metadata>
+</package>

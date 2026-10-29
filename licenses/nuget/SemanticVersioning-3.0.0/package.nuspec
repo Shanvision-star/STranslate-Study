@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SemanticVersioning</id>
+    <version>3.0.0</version>
+    <authors>Adam Reeve</authors>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/adamreeve/semver.net</projectUrl>
+    <description>This library implements the Semantic Versioning 2.0.0 specification and the version range specification used by npm.</description>
+    <copyright>Copyright Adam Reeve</copyright>
+    <repository type="git" url="https://github.com/adamreeve/semver.net" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+</package>

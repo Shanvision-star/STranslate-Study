@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>iNKORE.UI.WPF.Modern</id>
+    <version>0.10.2.1</version>
+    <title>iNKORE.UI.WPF.Modern</title>
+    <authors>Yoojun Zhou</authors>
+    <owners>iNKORE Studios</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/iNKORE-NET/UI.WPF.Modern/blob/main/LICENSE</licenseUrl>
+    <icon>WpfLibrary_64w.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://docs.inkore.net/ui-wpf-modern</projectUrl>
+    <description>Modern (Fluent 2) styles and controls for your WPF applications.</description>
+    <copyright>Copyright © iNKORE! (iNKORE Studios) 2025. All rights reserved.</copyright>
+    <language>en-US</language>
+    <tags>WPF;C#;Modern;Fluent;UI;iNKORE;XAML;Metro;CSharp;dotNET;Controls;Style;UI;WinUI</tags>
+    <repository type="git" url="https://github.com/iNKORE-NET/UI.WPF.Modern.git" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.2">
+        <dependency id="System.ValueTuple" version="4.5.0" exclude="Build,Analyzers" />
+        <dependency id="iNKORE.UI.WPF" version="1.2.8" />
+      </group>
+      <group targetFramework="net6.0-windows7.0">
+        <dependency id="iNKORE.UI.WPF" version="1.2.8" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="netstandard" targetFramework=".NETFramework4.7.2" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

@@ -19,7 +19,6 @@ public partial class AboutViewModel(
     INotification notification,
     ISnackbar snackbar,
     Internationalization i18n,
-    UpdaterService updaterService,
     BackupService backupService) : ObservableObject
 {
     private const int PortableModeOperationDelaySeconds = 3;
@@ -36,14 +35,10 @@ public partial class AboutViewModel(
     #region ICommand
 
     [RelayCommand]
-    private async Task CheckUpdateAsync()
+    private Task CheckUpdateAsync()
     {
-        if (Version == Constant.Dev)
-        {
-            snackbar.ShowWarning(i18n.GetTranslation("NoCheckUpdataInDev"));
-            return;
-        }
-        await updaterService.UpdateAppAsync();
+        snackbar.ShowWarning("学习版请从项目 Releases 页面手动更新，避免被上游版本覆盖。");
+        return Task.CompletedTask;
     }
 
     [RelayCommand]

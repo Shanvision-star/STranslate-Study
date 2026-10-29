@@ -1,0 +1,922 @@
+[
+  {
+    "package": "ChefKeys/0.1.2",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Jeremy Wu",
+    "copyright": "Jeremy Wu",
+    "project": "https://github.com/jjw24/ChefKeys",
+    "license_files": []
+  },
+  {
+    "package": "CommunityToolkit.Mvvm/8.4.2",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "(c) .NET Foundation and Contributors. All rights reserved.",
+    "project": "https://github.com/CommunityToolkit/dotnet",
+    "license_files": [
+      "License.md",
+      "ThirdPartyNotices.txt"
+    ]
+  },
+  {
+    "package": "Dapper.Contrib/2.0.78",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Sam Saffron,Johan Danforth",
+    "copyright": "2019 Stack Exchange, Inc.",
+    "project": "https://github.com/StackExchange/Dapper",
+    "license_files": []
+  },
+  {
+    "package": "Dapper/2.0.78",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Sam Saffron,Marc Gravell,Nick Craver",
+    "copyright": "2019 Stack Exchange, Inc.",
+    "project": "https://github.com/StackExchange/Dapper",
+    "license_files": []
+  },
+  {
+    "package": "H.InputSimulator/1.5.0",
+    "license": "MS-PL",
+    "kind": "expression",
+    "authors": "havendv, Michael Noonan, Theodoros Chatzigiannakis",
+    "copyright": "",
+    "project": "",
+    "license_files": []
+  },
+  {
+    "package": "Hardcodet.NotifyIcon.Wpf/2.0.1",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Philipp Sumi, Robin Krom, Jan Karger",
+    "copyright": "Copyright (c) 2009 - 2019 Philipp Sumi, 2019 - 2024 Philipp Sumi, Robin Krom, Jan Karger",
+    "project": "https://github.com/hardcodet/wpf-notifyicon",
+    "license_files": [
+      "LICENSE"
+    ]
+  },
+  {
+    "package": "Markdig.Wpf/0.5.0.1",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Nicolas Musset",
+    "copyright": "Copyright © Nicolas Musset 2016-2021",
+    "project": "https://github.com/Kryptos-FR/markdig-wpf",
+    "license_files": []
+  },
+  {
+    "package": "Markdig/0.22.0",
+    "license": "BSD-2-Clause",
+    "kind": "expression",
+    "authors": "Alexandre Mutel",
+    "copyright": "Alexandre Mutel",
+    "project": "https://github.com/lunet-io/markdig",
+    "license_files": []
+  },
+  {
+    "package": "Microsoft.Bcl.Cryptography/10.0.2",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Build.Tasks.Git/1.0.0",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://github.com/dotnet/sourcelink",
+    "license_files": []
+  },
+  {
+    "package": "Microsoft.Data.Sqlite.Core/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://docs.microsoft.com/dotnet/standard/data/sqlite/",
+    "license_files": []
+  },
+  {
+    "package": "Microsoft.Data.Sqlite/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://docs.microsoft.com/dotnet/standard/data/sqlite/",
+    "license_files": []
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration.Abstractions/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration.Binder/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration.CommandLine/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration.EnvironmentVariables/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration.FileExtensions/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration.Json/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration.UserSecrets/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Configuration/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.DependencyInjection/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Diagnostics.Abstractions/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Diagnostics/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.FileProviders.Abstractions/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.FileProviders.Physical/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.FileSystemGlobbing/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Hosting.Abstractions/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Hosting/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Http/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Logging.Abstractions/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Logging.Configuration/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Logging.Console/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Logging.Debug/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Logging.EventLog/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Logging.EventSource/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Logging/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Options.ConfigurationExtensions/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Options/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Primitives/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.IdentityModel.Abstractions/8.19.1",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet",
+    "license_files": []
+  },
+  {
+    "package": "Microsoft.IdentityModel.JsonWebTokens/8.19.1",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet",
+    "license_files": []
+  },
+  {
+    "package": "Microsoft.IdentityModel.Logging/8.19.1",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet",
+    "license_files": []
+  },
+  {
+    "package": "Microsoft.IdentityModel.Tokens/8.19.1",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet",
+    "license_files": []
+  },
+  {
+    "package": "Microsoft.NETCore.Platforms/1.1.0",
+    "license": "http://go.microsoft.com/fwlink/?LinkId=329770",
+    "kind": "url",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation.  All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "dotnet_library_license.txt",
+      "ThirdPartyNotices.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.SourceLink.Common/1.0.0",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://github.com/dotnet/sourcelink",
+    "license_files": []
+  },
+  {
+    "package": "Microsoft.SourceLink.GitHub/1.0.0",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://github.com/dotnet/sourcelink",
+    "license_files": []
+  },
+  {
+    "package": "Microsoft.Toolkit.Uwp.Notifications/7.1.3",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft.Toolkit,dotnetfoundation",
+    "copyright": "(c) .NET Foundation and Contributors.  All rights reserved.",
+    "project": "https://github.com/CommunityToolkit/WindowsCommunityToolkit",
+    "license_files": [
+      "License.md"
+    ]
+  },
+  {
+    "package": "Microsoft.Windows.CsWin32/0.3.298",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://github.com/Microsoft/CsWin32",
+    "license_files": [
+      "NOTICE.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.Windows.SDK.Win32Docs/0.1.42-alpha",
+    "license": "https://aka.ms/WinSDKLicenseURL",
+    "kind": "url",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://github.com/microsoft/win32metadata",
+    "license_files": []
+  },
+  {
+    "package": "Microsoft.Windows.SDK.Win32Metadata/70.0.11-preview",
+    "license": "sdk_license.txt",
+    "kind": "file",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://github.com/microsoft/win32metadata",
+    "license_files": [
+      "sdk_license.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.Windows.WDK.Win32Metadata/0.13.25-experimental",
+    "license": "sdk_license.txt",
+    "kind": "file",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://github.com/microsoft/wdkmetadata",
+    "license_files": [
+      "sdk_license.txt"
+    ]
+  },
+  {
+    "package": "MouseKeyHook/5.7.1",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "George Mamaladze",
+    "copyright": "(c) George Mamaladze 2000-2023",
+    "project": "https://github.com/gmamaladze/globalmousekeyhook",
+    "license_files": []
+  },
+  {
+    "package": "NAudio.Asio/2.3.0",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Mark Heath",
+    "copyright": "© Mark Heath 2026",
+    "project": "https://github.com/naudio/NAudio",
+    "license_files": []
+  },
+  {
+    "package": "NAudio.Core/2.3.0",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Mark Heath",
+    "copyright": "© Mark Heath 2026",
+    "project": "https://github.com/naudio/NAudio",
+    "license_files": []
+  },
+  {
+    "package": "NAudio.Midi/2.3.0",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Mark Heath",
+    "copyright": "© Mark Heath 2026",
+    "project": "https://github.com/naudio/NAudio",
+    "license_files": []
+  },
+  {
+    "package": "NAudio.Wasapi/2.3.0",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Mark Heath",
+    "copyright": "© Mark Heath 2026",
+    "project": "https://github.com/naudio/NAudio",
+    "license_files": []
+  },
+  {
+    "package": "NAudio.WinForms/2.3.0",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Mark Heath",
+    "copyright": "© Mark Heath 2026",
+    "project": "https://github.com/naudio/NAudio",
+    "license_files": []
+  },
+  {
+    "package": "NAudio.WinMM/2.3.0",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "NAudio.WinMM",
+    "copyright": "© Mark Heath 2023",
+    "project": "https://github.com/naudio/NAudio",
+    "license_files": []
+  },
+  {
+    "package": "NAudio/2.3.0",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Mark Heath & Contributors",
+    "copyright": "© Mark Heath 2026",
+    "project": "https://github.com/naudio/NAudio",
+    "license_files": []
+  },
+  {
+    "package": "NETStandard.Library/2.0.3",
+    "license": "https://github.com/dotnet/standard/blob/master/LICENSE.TXT",
+    "kind": "url",
+    "authors": "Microsoft",
+    "copyright": ".NET Foundation and Contributors",
+    "project": "https://dot.net/",
+    "license_files": [
+      "LICENSE.TXT",
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "NHotkey.Wpf/4.0.0",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Thomas Levesque",
+    "copyright": "",
+    "project": "https://github.com/thomaslevesque/NHotkey",
+    "license_files": []
+  },
+  {
+    "package": "NHotkey/4.0.0",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Thomas Levesque",
+    "copyright": "",
+    "project": "https://github.com/thomaslevesque/NHotkey",
+    "license_files": []
+  },
+  {
+    "package": "ObservableCollections/3.3.4",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Cysharp",
+    "copyright": "© Cysharp, Inc.",
+    "project": "https://github.com/Cysharp/ObservableCollections",
+    "license_files": []
+  },
+  {
+    "package": "PracticalToolkit.WPF/1.0.4",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "zggsong",
+    "copyright": "",
+    "project": "https://github.com/ZGGSONG/PracticalToolkit/",
+    "license_files": []
+  },
+  {
+    "package": "SQLitePCLRaw.bundle_e_sqlite3/2.1.11",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Eric Sink",
+    "copyright": "Copyright 2014-2024 SourceGear, LLC",
+    "project": "",
+    "license_files": []
+  },
+  {
+    "package": "SQLitePCLRaw.core/2.1.11",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Eric Sink",
+    "copyright": "Copyright 2014-2024 SourceGear, LLC",
+    "project": "",
+    "license_files": []
+  },
+  {
+    "package": "SQLitePCLRaw.lib.e_sqlite3/2.1.11",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Eric Sink",
+    "copyright": "Copyright 2014-2024 SourceGear, LLC",
+    "project": "",
+    "license_files": []
+  },
+  {
+    "package": "SQLitePCLRaw.provider.e_sqlite3/2.1.11",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Eric Sink",
+    "copyright": "Copyright 2014-2024 SourceGear, LLC",
+    "project": "",
+    "license_files": []
+  },
+  {
+    "package": "ScreenGrab/1.0.17",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "zggsong",
+    "copyright": "",
+    "project": "https://github.com/ZGGSONG/ScreenGrab/",
+    "license_files": []
+  },
+  {
+    "package": "SemanticVersioning/3.0.0",
+    "license": "LICENSE",
+    "kind": "file",
+    "authors": "Adam Reeve",
+    "copyright": "Copyright Adam Reeve",
+    "project": "https://github.com/adamreeve/semver.net",
+    "license_files": [
+      "LICENSE"
+    ]
+  },
+  {
+    "package": "Serilog.Extensions.Logging/10.0.0",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Microsoft,Serilog Contributors",
+    "copyright": "",
+    "project": "https://github.com/serilog/serilog-extensions-logging",
+    "license_files": []
+  },
+  {
+    "package": "Serilog.Sinks.File/7.0.0",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Serilog Contributors",
+    "copyright": "",
+    "project": "https://github.com/serilog/serilog-sinks-file",
+    "license_files": []
+  },
+  {
+    "package": "Serilog/4.2.0",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Serilog Contributors",
+    "copyright": "Copyright © Serilog Contributors",
+    "project": "https://serilog.net/",
+    "license_files": []
+  },
+  {
+    "package": "System.IdentityModel.Tokens.Jwt/8.19.1",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet",
+    "license_files": []
+  },
+  {
+    "package": "System.Reactive/5.0.0",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": ".NET Foundation and Contributors",
+    "copyright": "Copyright (c) .NET Foundation and Contributors.",
+    "project": "https://github.com/dotnet/reactive",
+    "license_files": []
+  },
+  {
+    "package": "System.Reflection.MetadataLoadContext/10.0.9",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Tesseract/5.2.0",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Charles Weld",
+    "copyright": "Copyright 2012-2020 Charles Weld",
+    "project": "https://github.com/charlesw/tesseract/",
+    "license_files": []
+  },
+  {
+    "package": "Velopack/1.2.0",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Velopack Ltd,Caelan Sayler,Kevin Bost",
+    "copyright": "Copyright © Velopack Ltd. All rights reserved.",
+    "project": "https://github.com/velopack/velopack",
+    "license_files": []
+  },
+  {
+    "package": "WebDav.Client/2.9.0",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "skazantsev",
+    "copyright": "Copyright © 2022 skazantsev",
+    "project": "https://github.com/skazantsev/WebDavClient",
+    "license_files": [
+      "LICENSE.txt"
+    ]
+  },
+  {
+    "package": "WpfMath/2.1.0",
+    "license": "MIT AND OFL-1.1",
+    "kind": "expression",
+    "authors": "ForNeVeR",
+    "copyright": "Copyright © Alex Regueiro 2010; Copyright © WPF-Math Contributors 2023; Copyright © XAML-Math Contributors 2023",
+    "project": "https://github.com/ForNeVeR/xaml-math",
+    "license_files": [
+      "FONT-LICENSES.md"
+    ]
+  },
+  {
+    "package": "WpfScreenHelper/2.1.1",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Michael Denny, Contributors (see GitHub repo)",
+    "copyright": "Copyright Michael Denny 2019",
+    "project": "https://github.com/micdenny/WpfScreenHelper",
+    "license_files": []
+  },
+  {
+    "package": "XamlFlair.WPF/1.2.13",
+    "license": "",
+    "kind": "url",
+    "authors": "XamlFlair.WPF",
+    "copyright": "Copyright © 2021",
+    "project": "https://github.com/XamlFlair/XamlFlair",
+    "license_files": []
+  },
+  {
+    "package": "XamlMath.Shared/2.1.0",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "ForNeVeR",
+    "copyright": "Copyright © Alex Regueiro 2010; Copyright © WPF-Math Contributors 2023; Copyright © XAML-Math Contributors 2023",
+    "project": "https://github.com/ForNeVeR/xaml-math",
+    "license_files": []
+  },
+  {
+    "package": "ZKWeb.System.Drawing/4.0.1",
+    "license": "https://opensource.org/licenses/MIT",
+    "kind": "url",
+    "authors": "ZKWeb.System.Drawing",
+    "copyright": "",
+    "project": "https://github.com/zkweb-framework/zkweb.system.drawing",
+    "license_files": []
+  },
+  {
+    "package": "ZXing.Net.Bindings.ZKWeb.System.Drawing/0.16.9",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Michael Jahn",
+    "copyright": "",
+    "project": "https://github.com/micjahn/ZXing.Net/",
+    "license_files": []
+  },
+  {
+    "package": "ZXing.Net/0.16.11",
+    "license": "Apache-2.0",
+    "kind": "expression",
+    "authors": "Michael Jahn",
+    "copyright": "",
+    "project": "https://github.com/micjahn/ZXing.Net/",
+    "license_files": []
+  },
+  {
+    "package": "gong-wpf-dragdrop/4.0.0",
+    "license": "LICENSE",
+    "kind": "file",
+    "authors": "Jan Karger, Steven Kirk, mitchell.jon",
+    "copyright": "Copyright © 2013 - 2024 GongSolutions.WPF.DragDrop",
+    "project": "https://github.com/punker76/gong-wpf-dragdrop",
+    "license_files": [
+      "LICENSE"
+    ]
+  },
+  {
+    "package": "iNKORE.UI.WPF.Modern/0.10.2.1",
+    "license": "https://github.com/iNKORE-NET/UI.WPF.Modern/blob/main/LICENSE",
+    "kind": "url",
+    "authors": "Yoojun Zhou",
+    "copyright": "Copyright © iNKORE! (iNKORE Studios) 2025. All rights reserved.",
+    "project": "https://docs.inkore.net/ui-wpf-modern",
+    "license_files": []
+  },
+  {
+    "package": "iNKORE.UI.WPF/1.2.8",
+    "license": "LGPL-2.1-or-later",
+    "kind": "expression",
+    "authors": "Yoojun Zhou",
+    "copyright": "",
+    "project": "",
+    "license_files": []
+  },
+  {
+    "package": "microsoft.netcore.app.runtime.win-x64/10.0.14",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "LICENSE.TXT",
+      "THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "microsoft.windowsdesktop.app.runtime.win-x64/10.0.14",
+    "license": "MIT",
+    "kind": "expression",
+    "authors": "Microsoft",
+    "copyright": "© Microsoft Corporation. All rights reserved.",
+    "project": "https://dot.net/",
+    "license_files": [
+      "LICENSE"
+    ]
+  }
+]

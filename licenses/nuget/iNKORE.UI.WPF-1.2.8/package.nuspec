@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>iNKORE.UI.WPF</id>
+    <version>1.2.8</version>
+    <title>iNKORE.UI.WPF</title>
+    <authors>Yoojun Zhou</authors>
+    <owners>iNKORE Studios</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">LGPL-2.1-or-later</license>
+    <licenseUrl>https://licenses.nuget.org/LGPL-2.1-or-later</licenseUrl>
+    <icon>WpfLibrary_256w.png</icon>
+    <readme>README.md</readme>
+    <description>Some frequently-used modules and helpers for your WPF applications</description>
+    <tags>WPF;C#;UI;iNKORE;XAML;CSharp;dotNET;Controls;UI</tags>
+    <repository type="git" url="https://github.com/iNKORE-NET/UI.WPF.git" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.2" />
+      <group targetFramework="net6.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="netstandard" targetFramework=".NETFramework4.7.2" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

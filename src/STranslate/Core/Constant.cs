@@ -7,6 +7,8 @@ namespace STranslate.Core;
 public class Constant
 {
     public const string AppName = "STranslate";
+    public const string EditionName = "STranslate Study";
+    public const string DataFolderName = "STranslate-Study";
     public const string Plugins = "Plugins";
     public const string PortableFolderName = "PortableConfig";
     public const string Cache = "Cache";
@@ -18,7 +20,7 @@ public class Constant
     public const string SystemLanguageCode = "system";
     public const string HttpClientName = "DefaultClient";
     public const string HostExeName = "z_stranslate_host.exe";
-    public const string TaskName = "STranslateSkipUAC";
+    public const string TaskName = "STranslateStudySkipUAC";
     public const string EmptyHotkey = "None";
     public const string PluginFileExtension = ".spkg";
     public const string NeedDelete = "NeedDelete.txt";
@@ -26,13 +28,13 @@ public class Constant
     public const string InfoFileName = ".INFO";
     public const string BackupFileName = ".BACKUP";
 
-    public const string Github = "https://github.com/STranslate/STranslate";
+    public const string Github = "https://github.com/Shanvision-star/STranslate-Study";
     public const string Sponsor = "https://github.com/STranslate/STranslate/tree/main?tab=readme-ov-file#donations";
     public const string Dev = "Dev";
     public static readonly string Version = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location.NonNull()).ProductVersion.NonNull();
 
     public static readonly Uri GithubUri = new(Github);
-    public static readonly Uri ReportUri = new("https://github.com/STranslate/STranslate/issues/new/choose");
+    public static readonly Uri ReportUri = new("https://github.com/Shanvision-star/STranslate-Study/issues/new");
     public static readonly Uri WebsiteUri = new("https://stranslate.zggsong.com");
     public static readonly Uri GroupUri = new("https://t.me/stranslatewpf");
     public static readonly Uri FlowLauncherUri = new("https://github.com/Flow-Launcher/Flow.Launcher");

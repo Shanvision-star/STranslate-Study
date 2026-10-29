@@ -14,7 +14,7 @@
     xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
     xmlns:vm="clr-namespace:STranslate.ViewModels"
     Name="STWindow"
-    Title="STranslate"
+    Title="STranslate Study"
     Width="{Binding Settings.MainWindowWidth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
     MinWidth="400"
     MinHeight="200"
@@ -127,7 +127,17 @@
             ToggleQuickServiceCommand="{Binding ToggleQuickServiceCommand}"
             VisibleActions="{Binding Settings.MainHeaderVisibleActions}" />
 
-        <ui:ScrollViewerEx Margin="10,37,0,5">
+        <Border Margin="10,38,10,0" Padding="4,3" VerticalAlignment="Top">
+            <DockPanel LastChildFill="True">
+                <Button DockPanel.Dock="Right" Margin="8,0,0,0" Padding="10,4"
+                        Content="{DynamicResource StudyLibraryOpen}" Command="{Binding OpenStudyLibraryCommand}" />
+                <Button DockPanel.Dock="Right" Margin="6,0,0,0" Padding="8,4" Content="学习助手"
+                        ToolTip="绑定自己的 Codex、ChatGPT 或 Claude Code 学习会话" Command="{Binding OpenStudyAssistantCommand}" />
+                <TextBlock VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap"
+                           Text="{Binding StudyLibraryStatus}" />
+            </DockPanel>
+        </Border>
+        <ui:ScrollViewerEx Margin="10,83,0,5">
             <StackPanel>
                 <!--  //  InputControl  //  -->
                 <control:InputControl
@@ -356,6 +366,13 @@
                         </MenuItem.Icon>
                     </MenuItem>
 
+                    <Separator />
+                    <MenuItem Command="{Binding Source={StaticResource ViewModel}, Path=Data.OpenStudyLibraryCommand}" Header="{DynamicResource StudyLibraryOpen}" />
+                    <MenuItem Header="{DynamicResource StudyLibraryAutoSave}" IsCheckable="True"
+                              IsChecked="{Binding Source={StaticResource ViewModel}, Path=Data.Settings.StudyLibraryAutoSave, Mode=TwoWay}" />
+                    <MenuItem Header="{DynamicResource StudyLibraryCloudSync}" IsCheckable="True"
+                              IsChecked="{Binding Source={StaticResource ViewModel}, Path=Data.Settings.StudyLibraryCloudSyncEnabled, Mode=TwoWay}" />
+                    <Separator />
                     <MenuItem Command="{Binding Source={StaticResource ViewModel}, Path=Data.ResetLocationCommand}" Header="{DynamicResource ResetLocation}">
                         <MenuItem.Icon>
                             <ui:FontIcon Icon="{x:Static ui:FluentSystemIcons.ArrowMinimize_20_Regular}" />

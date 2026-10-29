@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Windows.WDK.Win32Metadata</id>
+    <version>0.13.25-experimental</version>
+    <title>WDK Metadata</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">sdk_license.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>images\windows.png</icon>
+    <projectUrl>https://github.com/microsoft/wdkmetadata</projectUrl>
+    <description>This packages provides metadata (.winmd) for the Windows Driver Kit (WDK). It is intended to be used as the basis for generating language-specific projections. It is not loadable as a CLR assembly.</description>
+    <summary>This packages provides metadata (.winmd) for the Windows Driver Kit (WDK).</summary>
+    <releaseNotes>https://github.com/microsoft/wdkmetadata/releases/tag/v0.13.25-experimental</releaseNotes>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>WDK Metadata</tags>
+    <repository type="git" url="https://github.com/microsoft/wdkmetadata.git" />
+    <dependencies>
+      <dependency id="Microsoft.Windows.SDK.Win32Metadata" version="63.0.31-preview" />
+    </dependencies>
+  </metadata>
+</package>

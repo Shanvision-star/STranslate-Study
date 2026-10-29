@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Markdig.Wpf</id>
+    <version>0.5.0.1</version>
+    <authors>Nicolas Musset</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/Kryptos-FR/markdig-wpf</projectUrl>
+    <description>A WPF library for lunet-io/markdig</description>
+    <releaseNotes>https://github.com/Kryptos-FR/markdig.wpf/blob/master/RELEASENOTES.md</releaseNotes>
+    <copyright>Copyright © Nicolas Musset 2016-2021</copyright>
+    <tags>Markdown CommonMark md xaml WPF</tags>
+    <repository type="git" url="https://github.com/Kryptos-FR/markdig.wpf.git" commit="f172c1337eacd80f5fd138b1eb2547e62690b243" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.2">
+        <dependency id="Markdig" version="0.22.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="Markdig" version="0.22.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net5.0-windows7.0">
+        <dependency id="Markdig" version="0.22.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+      <group targetFramework="net5.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+</package>

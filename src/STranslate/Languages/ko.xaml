@@ -844,4 +844,7 @@
     <sys:String x:Key="EditPrompt_Content">편집</sys:String>
     <sys:String x:Key="Temperature">온도 (Temperature)</sys:String>
     <sys:String x:Key="Temperature_Description">모델 출력의 무작위성을 제어합니다</sys:String>
+    <sys:String x:Key="StudyLibraryOpen">Open study library / Print</sys:String>
+    <sys:String x:Key="StudyLibraryAutoSave">Auto-save English and Spanish</sys:String>
+    <sys:String x:Key="StudyLibraryCloudSync">Allow sync to personal ChatGPT</sys:String>
 </ResourceDictionary>

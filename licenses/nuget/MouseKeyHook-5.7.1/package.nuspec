@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MouseKeyHook</id>
+    <version>5.7.1</version>
+    <authors>George Mamaladze</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>mouse-keyboard-hook-logo64x64.png</icon>
+    <projectUrl>https://github.com/gmamaladze/globalmousekeyhook</projectUrl>
+    <description>This library attaches to windows global hooks, tracks keyboard and mouse clicks and movement and raises common .NET events with KeyEventArgs and MouseEventArgs, so you can easily retrieve any information you need:
+
+      * Mouse coordinates
+      * Mouse buttons clicked
+      * Mouse wheel scrolls
+      * Key presses and releases
+      * Special key states
+      * [NEW] Key combinations and sequences
+
+      Additionally, there is a possibility to supress certain keyboard or mouse clicks, or detect special key combinations.</description>
+    <copyright>(c) George Mamaladze 2000-2023</copyright>
+    <tags>keyboard mouse hook event global spy</tags>
+    <repository type="git" url="https://github.com/gmamaladze/globalmousekeyhook" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.7.2" />
+      <group targetFramework=".NETFramework4.8" />
+      <group targetFramework="net6.0-windows7.0" />
+      <group targetFramework="net7.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+      <group targetFramework="net7.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+      <group targetFramework=".NETFramework4.7.2" />
+      <group targetFramework=".NETFramework4.8" />
+    </frameworkReferences>
+  </metadata>
+</package>

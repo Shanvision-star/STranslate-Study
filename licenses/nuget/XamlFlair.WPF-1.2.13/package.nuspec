@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>XamlFlair.WPF</id>
+    <version>1.2.13</version>
+    <title>XamlFlair.WPF</title>
+    <authors>XamlFlair.WPF</authors>
+    <owners>XamlFlair</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/XamlFlair/XamlFlair</projectUrl>
+    <iconUrl>https://github.com/XamlFlair/XamlFlair/blob/master/nuget_logo.png?raw=true</iconUrl>
+    <description>XamlFlair animation library for the WPF platform.</description>
+    <releaseNotes>Applied a fix for From animations due to Transforms not updating their values</releaseNotes>
+    <copyright>Copyright © 2021</copyright>
+    <dependencies>
+      <dependency id="Microsoft.Extensions.Logging.Abstractions" version="1.1.1" />
+      <dependency id="System.Reactive" version="5.0.0" />
+      <dependency id="Microsoft.SourceLink.GitHub" version="1.0.0" />
+    </dependencies>
+  </metadata>
+</package>

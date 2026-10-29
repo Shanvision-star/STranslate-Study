@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>WpfScreenHelper</id>
+    <version>2.1.1</version>
+    <title>Screen Helper for WPF</title>
+    <authors>Michael Denny, Contributors (see GitHub repo)</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/micdenny/WpfScreenHelper</projectUrl>
+    <description>Porting of Windows Forms Screen helper for Windows Presentation Foundation (WPF). It avoids dependencies on Windows Forms libraries when developing in WPF.</description>
+    <copyright>Copyright Michael Denny 2019</copyright>
+    <tags>WPF Screen Monitor Display Helper</tags>
+    <repository type="git" url="https://github.com/micdenny/WpfScreenHelper" commit="4965d9fe58d5b444c04c95cf66adf63e54b5dfde" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.0" />
+      <group targetFramework="net6.0-windows7.0" />
+      <group targetFramework="net8.0-windows7.0" />
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net6.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+      <group targetFramework="net8.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+      <group targetFramework=".NETFramework4.0" />
+    </frameworkReferences>
+  </metadata>
+</package>

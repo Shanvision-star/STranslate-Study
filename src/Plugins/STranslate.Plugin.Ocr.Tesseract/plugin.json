@@ -1,0 +1,10 @@
+{
+  "PluginID": "a93ccba0c4144fefa471ac7b9a87bc23",
+  "Name": "Tesseract Offline OCR",
+  "Description": "Local English, Spanish and simplified Chinese OCR. Apache-2.0 engine and models.",
+  "Author": "STranslate Study contributors",
+  "Version": "0.1.0",
+  "Website": "https://github.com/tesseract-ocr/tesseract",
+  "ExecuteFileName": "STranslate.Plugin.Ocr.Tesseract.dll",
+  "IconPath": ""
+}

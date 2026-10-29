@@ -26,7 +26,7 @@ public sealed class AutoUpdateCheckerService(
             return;
 
         // 开发版本不进行自动检查，避免频繁误报线上更新。
-        if (Constant.Version == "1.0.0")
+        if (Constant.EditionName.Equals("STranslate Study", StringComparison.Ordinal) || Constant.Version == "1.0.0")
             return;
 
         _started = true;

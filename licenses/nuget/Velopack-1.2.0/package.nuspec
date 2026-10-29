@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Velopack</id>
+    <version>1.2.0</version>
+    <title>Velopack</title>
+    <authors>Velopack Ltd,Caelan Sayler,Kevin Bost</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>Velopack_200.png</icon>
+    <readme>README_NUGET.md</readme>
+    <projectUrl>https://github.com/velopack/velopack</projectUrl>
+    <description>Installer and automatic update framework for cross-platform desktop applications</description>
+    <copyright>Copyright © Velopack Ltd. All rights reserved.</copyright>
+    <tags>windows macos osx updater dotnet installer desktop squirrel velopack autoupdate automatic-updates</tags>
+    <repository type="git" url="https://github.com/velopack/velopack" branch="refs/heads/master" commit="f2edcbcafb81da5b3c884aaea330e225ad91d8b6" />
+    <dependencies>
+      <group targetFramework="net10.0" />
+      <group targetFramework=".NETFramework4.7.2">
+        <dependency id="Newtonsoft.Json" version="13.0.4" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net8.0" />
+      <group targetFramework="net9.0" />
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.Win32.Registry" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="13.0.4" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.IO.Compression" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.IO.Compression.FileSystem" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Net.Http" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Web" targetFramework=".NETFramework4.7.2" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

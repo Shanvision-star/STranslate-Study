@@ -8,14 +8,14 @@ public class DataLocation
         Path.Combine(Constant.ProgramDirectory, Constant.PortableFolderName);
 
     public static readonly string RoamingDataPath =
-        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Constant.AppName);
+        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Constant.DataFolderName);
 
     public static readonly string AppExePath = Path.Combine(Constant.ProgramDirectory, Constant.AppName + ".exe");
     public static readonly string HostExePath = Path.Combine(Constant.ProgramDirectory, Constant.HostExeName);
     public static readonly string StartupPath = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
     public static readonly string DesktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-    public static readonly string StartupShortcutPath = Path.Combine(StartupPath, Constant.AppName + ".lnk");
-    public static readonly string DesktopShortcutPath = Path.Combine(DesktopPath, Constant.AppName + ".lnk");
+    public static readonly string StartupShortcutPath = Path.Combine(StartupPath, Constant.EditionName + ".lnk");
+    public static readonly string DesktopShortcutPath = Path.Combine(DesktopPath, Constant.EditionName + ".lnk");
     public static readonly string InfoFilePath = Path.Combine(Constant.ProgramDirectory, Constant.InfoFileName);
     public static readonly string BackupFilePath = Path.Combine(Constant.ProgramDirectory, Constant.BackupFileName);
     public static readonly string TmpConfigDirectory = Path.Combine(Path.GetTempPath(), Constant.TmpConfigFolderName);

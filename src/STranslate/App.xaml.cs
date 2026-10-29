@@ -342,6 +342,13 @@ public partial class App : ISingleInstanceApp, INavigation, IDisposable
     [STAThread]
     public static void Main()
     {
+        if (Environment.GetCommandLineArgs().Contains("--export-study-library"))
+        {
+            new StudyLibrary(Path.Combine(DataLocation.DataDirectory(), "StudyLibrary"))
+                .ExportAsync().GetAwaiter().GetResult();
+            return;
+        }
+
         // Start the application as a single instance
         if (!SingleInstance<App>.InitializeAsFirstInstance())
             return;

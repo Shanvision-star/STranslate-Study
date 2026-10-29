@@ -457,6 +457,10 @@ public class HistoryModel
 {
     [Key] public long Id { get; set; }
 
+    [Write(false)]
+    [Computed]
+    public bool StudyLanguageVerified { get; set; }
+
     /// <summary>
     ///     记录时间
     /// </summary>

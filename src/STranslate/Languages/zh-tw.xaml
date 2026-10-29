@@ -871,4 +871,7 @@
     <sys:String x:Key="EditPrompt_Content">編輯</sys:String>
     <sys:String x:Key="Temperature">溫度控制</sys:String>
     <sys:String x:Key="Temperature_Description">控制著模型輸出的隨機性</sys:String>
+    <sys:String x:Key="StudyLibraryOpen">打开学习库 / 打印</sys:String>
+    <sys:String x:Key="StudyLibraryAutoSave">自动保存英语与西语</sys:String>
+    <sys:String x:Key="StudyLibraryCloudSync">允许同步至个人 ChatGPT</sys:String>
 </ResourceDictionary>

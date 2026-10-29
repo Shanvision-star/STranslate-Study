@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Windows.SDK.Win32Docs</id>
+    <version>0.1.42-alpha</version>
+    <authors>Microsoft</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://aka.ms/WinSDKLicenseURL</licenseUrl>
+    <icon>images/windows.png</icon>
+    <projectUrl>https://github.com/microsoft/win32metadata</projectUrl>
+    <description>Microsoft Windows API documentation</description>
+    <releaseNotes>https://github.com/microsoft/win32metadata/releases/tag/v54.0.16-preview</releaseNotes>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>Win32 Metadata</tags>
+    <repository type="git" commit="35b4ae8bdb4362a8d19daa0397a0b5f07cd2794d" />
+  </metadata>
+</package>
