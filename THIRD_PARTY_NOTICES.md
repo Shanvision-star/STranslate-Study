@@ -15,6 +15,7 @@ This component has a **custom license**, not MIT. It requires clear attribution 
 | Component | Version / source | License and notices |
 | --- | --- | --- |
 | Tesseract .NET wrapper | Charles Weld, NuGet Tesseract 5.2.0 | Apache-2.0, [wrapper license](licenses/Tesseract-wrapper.txt) |
+| InteropDotNet (used inside wrapper) | Andrey Akinshin | [Original MIT notice](licenses/InteropDotNet.txt), [source](https://github.com/AndreyAkinshin/InteropDotNet) |
 | Tesseract OCR native engine | Native tesseract50.dll supplied by Tesseract 5.2.0 NuGet | Apache-2.0, [engine license](licenses/Tesseract-engine.txt), [upstream](https://github.com/tesseract-ocr/tesseract) |
 | Leptonica native engine | 1.82.0, supplied by Tesseract NuGet | BSD-style, copyright Dan Bloomberg; [full notice](licenses/Leptonica.txt), [source](https://github.com/DanBloomberg/leptonica/tree/1.82.0) |
 | OCR language data | tessdata_fast commit `87416418657359cb625c412a48b6e1d6d41c29bd`, eng/spa/chi_sim | Apache-2.0, [model license](licenses/Tesseract-models.txt), [source](https://github.com/tesseract-ocr/tessdata_fast/tree/87416418657359cb625c412a48b6e1d6d41c29bd) |
