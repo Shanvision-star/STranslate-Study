@@ -1,6 +1,11 @@
 name: Study checks and Windows package
 on:
   workflow_dispatch:
+    inputs:
+      publish_preview:
+        description: Publish the verified Windows package to the existing preview release
+        type: boolean
+        default: false
   push:
     branches: [study-main, 'codex/**']
   pull_request:
@@ -32,9 +37,31 @@ jobs:
         run: |
           dotnet restore tools/ocr-smoke/OcrSmoke.csproj --configfile NuGet.Study.config
           dotnet run --project tools/ocr-smoke/OcrSmoke.csproj --no-restore -- output/dependencies
+      - name: Audit distributable
+        run: python tools/audit_package.py --zip output/STranslate-Study-win-x64.zip
       - uses: actions/upload-artifact@v4
         with:
           name: windows-preview
           path: |
             output/STranslate-Study-win-x64.zip
             output/SHA256SUMS.txt
+  release:
+    if: github.event_name == 'workflow_dispatch' && inputs.publish_preview
+    needs: verify
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v5
+        with:
+          name: windows-preview
+          path: output
+      - name: Publish existing preview
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release upload study-v0.1.0 output/STranslate-Study-win-x64.zip output/SHA256SUMS.txt --clobber
+          if ($LASTEXITCODE -ne 0) { throw 'Release upload failed' }
+          gh release edit study-v0.1.0 --draft=false --prerelease
+          if ($LASTEXITCODE -ne 0) { throw 'Release publication failed' }
